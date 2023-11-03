@@ -3,4 +3,5 @@ project(tinymapper C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(tinymapper main.c)
+add_executable(tinymapper src/main.c
+        src/process.h)
