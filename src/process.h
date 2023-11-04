@@ -11,7 +11,6 @@
 /// Note: as of right now numeric identifiers are not supported.
 /// If it doesn't find the handle it will return an invalid handle value.
 static HANDLE acquire_process_handle(const char* ident, uint32_t perms) {
-    // pointer to list of processes.
     HANDLE process_list = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
     // process entry struct where we'll be filling in the information.
     PROCESSENTRY32 process_info = { .dwSize = sizeof(PROCESSENTRY32) };
